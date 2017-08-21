@@ -1,5 +1,6 @@
 package com.sportsdata.tracker.team;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -373,6 +374,17 @@ public class Player {
     @SerializedName("age")
     @Expose
     private Integer age;
+
+
+    private List<PlayerStat> playerStats;
+
+    public List<PlayerStat> getPlayerStats() {
+        return playerStats;
+    }
+
+    public void setPlayerStats(List<PlayerStat> playerStats) {
+        this.playerStats = playerStats;
+    }
 
     public Integer getFightForYardsTrait() {
         return fightForYardsTrait;
